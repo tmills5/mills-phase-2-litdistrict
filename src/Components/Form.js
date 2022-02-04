@@ -26,7 +26,7 @@ function Form() {
 
         const book = { title, author, image }; //destructoring book 
             //console.log(book); //----WORKS!
-        fetch("http://localhost:7000/books", {       //this whatever port i designate or what is given..like 3000
+        fetch("http://localhost:8000/books", {       //this whatever port i designate or what is given..like 3000
             method: "POST", //type of method IE get, post, etc
             headers: {"Content-type": "application/json"}, //type of content im sending. im sending json data
             body: JSON.stringify(book) //actual data im sending. have to turn obkect into json string, "JSON.stringify does this"
