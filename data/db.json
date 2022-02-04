@@ -1,0 +1,46 @@
+{
+  "books": [
+    {
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1516211014l/332613._SX318_.jpg",
+      "title": "One Flew Over the Cuckoo's Nest",
+      "author": "Ken Kesey",
+      "id": 0
+    },
+    {
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.NQtU4F6GOz__Smcrse48DwAAAA%26pid%3DApi&f=1",
+      "title": "Sometimes a Great Notion",
+      "author": "Ken Kesey",
+      "id": 1
+    },
+    {
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1603740174l/54976986.jpg",
+      "title": "Great Circle",
+      "author": "Maggie Shipstead",
+      "id": 2
+    },
+    {
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1433086293l/21._SY475_.jpg",
+      "title": "A Short History of Nearly Everything",
+      "author": "Bill Bryson",
+      "id": 3
+    },
+    {
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1562554946l/310612._SY475_.jpg",
+      "title": "A Confederacy of Dunces",
+      "author": "John Kennedy Toole",
+      "id": 4
+    },
+    {
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1442899413l/6913830._SY475_.jpg",
+      "title": "Blind Descent",
+      "author": "James M. Tabor",
+      "id": 5
+    },
+    {
+      "title": "Physics of the Impossible",
+      "author": "Michio Kaku",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1320469147l/1168341.jpg",
+      "id": 6
+    }
+  ]
+}
