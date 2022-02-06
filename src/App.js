@@ -14,11 +14,13 @@ import Footer from "./Components/Footer";
 
 
 function App() {
+
+
   return (
     <Router>
       <Header />
       <NavBar />
-      <Form />
+      
 
       <Routes>
         <Route path='/' element={ <Home /> } />

@@ -28,7 +28,7 @@ function Home() {
       <div className="cardParent">
         {/* {books && <Booklist books={books}/>} */}
             {/* had to put in books && cause reading null at first-needed info there */}
-            {/* logical AND operator returns true if both are true-reads books first, then <Booklist /> */}
+            
       </div>
       
     )

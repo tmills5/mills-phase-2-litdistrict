@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Booklist from "./Booklist";
+import Form from "./Form";
 
 function Favorites() {
     const [books, setBooks] = useState(null);
@@ -7,18 +8,23 @@ function Favorites() {
     useEffect(() => {
       fetch('http://localhost:8000/books') //fetching the request
         .then(response => response.json()) //returning a promise in JS object
-        .then(data => { //console.log(data) //----WORKS!!
-            setBooks(data);
+        .then(books => { //console.log(data) //----WORKS!!
+            setBooks(books);
         })
     }, [])
+
+
 
     useEffect(() => {
         document.title = "favorites"
     }, [])
 
+
+
     return (
         <div>
-            {books && <Booklist books={books}/>}
+            <Form books={books}/>
+            {books && <Booklist books={books}/>} {/*logical and operator-reads books first so doesnt read null */}
         </div>
     )
 }
