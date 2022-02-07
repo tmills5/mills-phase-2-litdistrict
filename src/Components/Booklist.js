@@ -5,13 +5,11 @@ import "./Booklist.css";
 //Styling the card with bootstrap. 
 
     const Booklist = (props) => { //passing in props from favorites Parent
-        const books = props.books;
+         const books = props.books;
+         const deleteBook = props.deleteBook;
             //console.log(props) //---->WORKS!!
 
-        function deleteBook() {
-            //console.log("bye");  //----WORKS!!!
             
-        }
 
 
       return (
@@ -25,7 +23,7 @@ import "./Booklist.css";
                     <Card.Text>
                         {book.text}
                     </Card.Text>
-                <Button variant="primary" onClick={deleteBook}>Delete</Button>
+                <Button variant="primary" onClick={()=>deleteBook(book.id)}>Delete</Button>
                 </Card.Body>
                 </Card>
             </div>
@@ -35,4 +33,5 @@ import "./Booklist.css";
       )
     }
 
-export default Booklist;    
+
+export default Booklist;
