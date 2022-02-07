@@ -21,7 +21,7 @@ import "./Booklist.css";
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>
                     <Card.Text>
-                        {book.text}
+                        {book.author}
                     </Card.Text>
                 <Button variant="primary" onClick={()=>deleteBook(book.id)}>Delete</Button>
                 </Card.Body>

@@ -4,8 +4,7 @@ import Form from "./Form";
 
 function Favorites() {
     const [books, setBooks] = useState(null);
-//Get request
-
+//Get request---set the fetch to a variable, then called the variable in the useEffect
     useEffect(() => {
         getBooks();
     }, [])
@@ -26,7 +25,7 @@ function Favorites() {
         })
             .then(response => response.json())
             .then(books => {
-                getBooks();
+                getBooks();    //calling the get request again. this shows the updated booklist
             })
     }
 
@@ -40,8 +39,8 @@ function Favorites() {
 
     return (
         <div>
-            <Form books={books}/>
-            {books && <Booklist books={books} deleteBook={deleteBook}/>} {/*logical and operator-reads books first so doesnt read null */}
+            <Form books={books} setBooks={setBooks} getBooks={getBooks} />
+            {books && <Booklist books={books} deleteBook={deleteBook}/>}        {/*logical and operator-reads books first so doesnt read null */}
         </div>
     )
 }

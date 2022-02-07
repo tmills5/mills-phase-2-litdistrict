@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function Form(props) {
     const books = props.books;  //passing in books as a prop from parent Favorites
         //console.log(books) //---->WORKS!
+    const getBooks = props.getBooks;
 
     const [title, setTitle] = useState();
     const [author, setAuthor] = useState();
@@ -34,6 +35,10 @@ function Form(props) {
             headers: {"Content-type": "application/json"}, //type of content im sending. im sending json data
             body: JSON.stringify(book) //actual data im sending. have to turn object into json string, "JSON.stringify does this"
         })
+            .then(response => response.json())
+            .then(data => {
+                getBooks(data);
+            })
     }
 
 
