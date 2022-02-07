@@ -7,14 +7,14 @@ import "./Home.css";
 
 function Home() {
    //just using a random api to practice
-  function beerList() {
+  function breweryList() {
     fetch("https://api.openbrewerydb.org/breweries")
       .then(response => response.json())
-      .then(beers => {
-        console.log(beers)
+      .then(brewery => {
+        console.log(brewery)
       })
   } 
-  
+  breweryList()    //prints 2-dont know why
 
 //Changing the title on the webpage tab
     useEffect(()=> {
