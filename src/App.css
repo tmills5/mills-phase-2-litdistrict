@@ -1,5 +1,44 @@
-#parent-container-page {
-    height: 100%;
-    width: 100%;
-    border-style: dashed;
+#root {
+    background-color: rgb(84, 191, 230);
+}
+
+/* HEADER -------------------*/
+
+h1 {
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    opacity: 80%;
+}
+
+
+/* NAVBAR -------------------*/
+.navBar {
+    text-align: right;
+    margin: 10px;
+}
+
+.navlink {
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    color: rgb(145, 45, 158);
+    text-decoration: none;
+    padding-right: 30px;
+    font-stretch: expanded;
+    font-size: larger;
+}
+
+/* HOME----------------------*/
+
+/* FORM --------------------*/
+form {
+    padding: 1rem;
+}
+
+input {
+    width: 30rem;
+    margin: 5rem;
+    display: block;
+}
+
+/* FOOTER ------------------*/
+footer {
+    text-align: center;
 }

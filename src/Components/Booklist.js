@@ -16,7 +16,7 @@ import "./Booklist.css";
        <div className="cardParent">
            {books.map((book) => (
             <div key={book.id}>   
-                <Card style={{ width: '18rem' }} >
+                <Card style={{ width: '12rem' }} >
                 <Card.Img src={book.image} />
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>

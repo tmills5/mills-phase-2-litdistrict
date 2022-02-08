@@ -53,9 +53,9 @@ function Form(props) {
 
     return(
         <form onSubmit={handleSubmit}>
-            <input type='text' placeholder='Title' value={title} onChange={handleTitleChange} />
-            <input type='text' placeholder='Author' value={author} onChange={handleAuthorChange}  />
-            <input type='text' placeholder='Image Source' value={image} onChange={handleImageChange} />
+            <input type='text' placeholder='Title...' value={title} onChange={handleTitleChange} />
+            <input type='text' placeholder='Author...' value={author} onChange={handleAuthorChange}  />
+            <input type='text' placeholder='Image Source...' value={image} onChange={handleImageChange} />
             <button type='submit' id='submit' name='submit'>Submit</button>
         </form>
     )
