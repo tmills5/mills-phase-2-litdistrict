@@ -15,22 +15,6 @@ import Footer from "./Components/Footer";
 
 
 function App() {
-  //set the books state and the setter function
-const [ books, setBooks ] = useState();
-//const [bookList, setBookList] = useState;
-  //pass as prop to booklist
-function handleAddBook(newBook) {
-  
-  //using the spread operator so i dont mutate the original array
-  const newBooksArray = [...books, newBook]
-
-  //i need to pass a new object or array to setState when using functional component
-  //or i wont get a rerender
-  setBooks(newBooksArray);
-
-}
-
-
 
 
 

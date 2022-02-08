@@ -1,6 +1,5 @@
 import React from "react";
 import { Card, Button } from "react-bootstrap";
-import "./Booklist.css";
 
 //Styling the card with bootstrap. 
 
@@ -15,8 +14,8 @@ import "./Booklist.css";
       return (
        <div className="cardParent">
            {books.map((book) => (
-            <div key={book.id}>   
-                <Card style={{ width: '12rem' }} >
+            <div className="cardDiv" key={book.id} >   
+                <Card className="card" style={{ width: '15rem' }} >
                 <Card.Img src={book.image} />
                 <Card.Body>
                     <Card.Title>{book.title}</Card.Title>

@@ -7,14 +7,22 @@ import React, { useEffect, useState } from "react";
 
 function Home() {
    //just using a random api to practice
-  function breweryList() {
-    fetch("https://api.openbrewerydb.org/breweries")
+
+  const getRandomPoems = () => {
+    fetch("https://www.poemist.com/api/v1/randompoems")
       .then(response => response.json())
-      .then(brewery => {
-        console.log(brewery)
+      .then(poems => {
+        
+        console.log(poems)
+        
       })
   } 
-  breweryList()    //prints 2-dont know why
+
+  useEffect(()=> {
+     getRandomPoems()
+  }, [])
+   
+  const [ poems, setPoems ] = useState("")
 
 //Changing the title on the webpage tab
     useEffect(()=> {
@@ -23,8 +31,12 @@ function Home() {
 
 
     return (
-      <div className="cardParent">
-        <h1>HOME!!!</h1>
+      <div>
+        {/* <div>
+          {poems.map((poem)=> (
+            <h1>{poem.title}</h1>
+        ))}
+        </div> */}
       </div>
       
     )

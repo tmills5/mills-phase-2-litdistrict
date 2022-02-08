@@ -1,5 +1,6 @@
 #root {
     background-color: rgb(84, 191, 230);
+    height: 100%;
 }
 
 /* HEADER -------------------*/
@@ -11,6 +12,7 @@ h1 {
 
 
 /* NAVBAR -------------------*/
+
 .navBar {
     text-align: right;
     margin: 10px;
@@ -38,7 +40,26 @@ input {
     display: block;
 }
 
+/* BOOKLIST----------------- */
+
+.cardParent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+}
+
+.cardDiv {
+    position: relative;
+}
+
+.card {
+    margin: 15%;
+}
+
 /* FOOTER ------------------*/
+
 footer {
     text-align: center;
 }

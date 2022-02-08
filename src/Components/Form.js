@@ -3,7 +3,7 @@ import React, { useState, } from "react";
 function Form(props) {
     const books = props.books;  //passing in books as a prop from parent Favorites
         //console.log(books) //---->WORKS!
-    const setBooks = props.setBooks;
+    //const setBooks = props.setBooks;
     const getBooks = props.getBooks;
 
     const [title, setTitle] = useState("");
@@ -35,7 +35,7 @@ function Form(props) {
         
 
         fetch("http://localhost:8000/books", {       //this whatever port i designate or what is given..like 3000
-            method: "POST", //type of method IE get, post, etc
+            method: "POST", //type of method IE post,delete, etc
             headers: {"Content-type": "application/json"}, //type of content im sending. im sending json data
             body: JSON.stringify(newBook) //actual data im sending. have to turn object into json string, "JSON.stringify does this"
         })
