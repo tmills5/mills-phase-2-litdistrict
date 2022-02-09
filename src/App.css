@@ -4,10 +4,17 @@
 }
 
 /* HEADER -------------------*/
+header {
+    height: 10rem;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Ot6cyPQIgt63Q5uWC2ywqQHaHa%26pid%3DApi&f=1");
+    background-position: center;
+
+}
 
 h1 {
     Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
-    opacity: 80%;
+    color:black;
+    font-weight: bolder;
 }
 
 
@@ -28,6 +35,21 @@ h1 {
 }
 
 /* HOME----------------------*/
+/* .poems-parent-div {
+} */
+
+.poem-stack {
+    padding: 1rem;
+    margin: 5rem;
+}
+
+.poem-title, .poem-poet-name { 
+    text-align: center;
+}
+
+.poem-content {
+    text-align: center;
+}
 
 /* FORM --------------------*/
 form {

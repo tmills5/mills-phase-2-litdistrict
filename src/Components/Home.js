@@ -40,12 +40,12 @@ function Home() {
   
 
     return (
-      <div className="poems-parent-div" >
+      <div className="poems-parent-div">
         {poems.map((poem) => (
-          <div key={poem.title}>
-            <h3>{poem.title}</h3>
-            <h4>{poem.poet.name}</h4>
-            <p>{poem.content}</p>
+          <div className="poem-stack" key={poem.title}>
+            <h3 className="poem-title">{poem.title}</h3>
+            <h4 className="poem-poet-name">{poem.poet.name}</h4>
+            <p className="poem-content">{poem.content}</p>
           </div>
         ))}
       </div>
