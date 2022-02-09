@@ -6,7 +6,7 @@ import { Card, Button } from "react-bootstrap";
     const Booklist = (props) => { //passing in props from favorites Parent
          const books = props.books;
          const deleteBook = props.deleteBook;
-            //console.log(props) //---->WORKS!!
+            console.log(props) //---->WORKS!!
 
             
 

@@ -25,7 +25,7 @@ function Favorites() {
         })
             .then(response => response.json())
             .then(books => {
-                getBooks();    //calling the get request again. this shows the updated booklist
+                getBooks(books);    //calling the get request again. this shows the updated booklist
             })
     }
 
