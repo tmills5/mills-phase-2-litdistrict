@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Button } from "react-bootstrap";
+import LikeBtn from "./LikeBtn";
 
 //Styling the card with bootstrap. 
 
@@ -8,7 +9,6 @@ import { Card, Button } from "react-bootstrap";
          const deleteBook = props.deleteBook;
             console.log(props) //---->WORKS!!
 
-            
 
 
       return (
@@ -23,6 +23,7 @@ import { Card, Button } from "react-bootstrap";
                         {book.author}
                     </Card.Text>
                 <Button variant="primary" onClick={()=>deleteBook(book.id)}>Delete</Button>
+                <LikeBtn />
                 </Card.Body>
                 </Card>
             </div>

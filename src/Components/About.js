@@ -12,8 +12,11 @@ function About() {
     return (
         <div className="about-component">
             <h1>About...</h1>
-            <p>
-                
+            <p className="about-content">
+                The Literature District is a simple place where you can come and relax. 
+                The home page has random poems for your enjoyment and if you have a book in mind
+                feel free to add it to your list in the "favorites". If you would like some different poems 
+                then just refresh the page!
             </p>
         </div>
     )
