@@ -21,7 +21,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <NavBar />
+      {/* <NavBar /> put in the header */}
       
 
       <Routes>

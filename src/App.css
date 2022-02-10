@@ -1,14 +1,13 @@
 #root {
-    background-color: rgb(84, 191, 230);
-    height: 100%;
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858_960_720.jpg");
+    background-position: center;
+    
 }
 
 /* HEADER -------------------*/
 header {
-    height: 10rem;
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Ot6cyPQIgt63Q5uWC2ywqQHaHa%26pid%3DApi&f=1");
-    background-position: center;
-
+    height: 5rem;
+    
 }
 
 h1 {
@@ -27,30 +26,45 @@ h1 {
 
 .navlink {
     Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
-    color: rgb(145, 45, 158);
+    color: black;
     text-decoration: none;
     padding-right: 30px;
     font-stretch: expanded;
-    font-size: larger;
+    font-size: 20px;
 }
 
 /* HOME----------------------*/
-/* .poems-parent-div {
-} */
+h4 {
+    padding-top: 3rem;
+}
 
 .poem-stack {
     padding: 1rem;
     margin: 5rem;
+    background-color: rgba(152, 216, 240, 0.768);
 }
 
-.poem-title, .poem-poet-name { 
+.poem-title { 
     text-align: center;
+    font-size: xx-large;
+}
+
+.poem-poet-name {
+    text-align: center;
+    font-size:larger;
 }
 
 .poem-content {
     text-align: center;
-}
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
 
+}
+/* FAVORITES ------------------ */
+h5 {
+    font-weight: bolder;
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    text-decoration: underline;
+}
 /* FORM --------------------*/
 form {
     padding: 1rem;
@@ -83,5 +97,9 @@ input {
 /* FOOTER ------------------*/
 
 footer {
+    background-color:wheat;
     text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }

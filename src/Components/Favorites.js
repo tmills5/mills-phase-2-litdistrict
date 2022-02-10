@@ -39,6 +39,7 @@ function Favorites() {
 
     return (
         <div>
+            <h5>Add a book to your favorites list!</h5>
             <Form books={books} setBooks={setBooks} getBooks={getBooks} />
             {books && <Booklist books={books} deleteBook={deleteBook}/>}        {/*logical and operator-reads books first so doesnt read null */}
         </div>
