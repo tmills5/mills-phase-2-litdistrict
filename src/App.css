@@ -1,4 +1,4 @@
-html, body, .about-component  {
+ body, .about-component  {
     background-image: url("https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858_960_720.jpg");
     background-position: center;
     height: 100vh;
@@ -6,14 +6,16 @@ html, body, .about-component  {
 
 /* HEADER -------------------*/
 header {
-    height: 5rem;
-    
+    height: auto;
+    background-color: rgba(152, 216, 240, 0.768)
 }
 
-h1 {
+.header-text {
     Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
     color:black;
     font-weight: bolder;
+    padding-top: 30px;
+    font-size: 3em;
 }
 
 
@@ -21,7 +23,9 @@ h1 {
 
 .navBar {
     text-align: right;
-    margin: 10px;
+    margin-top: 40px;
+    position: relative;
+
 }
 
 .navlink {
@@ -34,8 +38,9 @@ h1 {
 }
 
 /* HOME----------------------*/
-h4 {
+.poems-opening-text {
     padding-top: 3rem;
+    text-align: center;
 }
 
 .poem-stack {
@@ -52,6 +57,7 @@ h4 {
 .poem-poet-name {
     text-align: center;
     font-size:larger;
+    padding: 30px;
 }
 
 .poem-content {
@@ -61,16 +67,32 @@ h4 {
 }
 
 /* ABOUT ---------------------- */
+.about-component {
+    text-align: center;
+}
+
+.about-title {
+    text-align: center;
+    padding-top: 20px;
+}
+
 .about-content {
     Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
     font-size: 2em; /* 1 em = to about 16px(default browser font size)*/
+    text-align: center;
+    margin: 5%;
+    font-stretch: expanded;
+}
 
+.about-book-img {
+    text-align: center;
+    height: 50%;
+    width: 50%;
 }
 
 /* FAVORITES ------------------ */
 h5 {
     font-weight: bolder;
-    
     text-decoration: underline;
 }
 

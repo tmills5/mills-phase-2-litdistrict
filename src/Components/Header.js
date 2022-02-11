@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <>
         <header>
-            <h1>The Literature District...</h1>
+            <h1 className="header-text">The Literature District...</h1>
             <Navbar />
         </header>
         </>
