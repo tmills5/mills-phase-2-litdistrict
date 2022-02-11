@@ -1,7 +1,7 @@
-#root {
+html, body, .about-component  {
     background-image: url("https://cdn.pixabay.com/photo/2016/08/05/09/31/banner-1571858_960_720.jpg");
     background-position: center;
-    
+    height: 100vh;
 }
 
 /* HEADER -------------------*/
@@ -61,11 +61,16 @@ h4 {
 }
 
 /* ABOUT ---------------------- */
+.about-content {
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    font-size: 2em; /* 1 em = to about 16px(default browser font size)*/
+
+}
 
 /* FAVORITES ------------------ */
 h5 {
     font-weight: bolder;
-    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
+    
     text-decoration: underline;
 }
 
