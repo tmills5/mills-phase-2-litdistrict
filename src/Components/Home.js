@@ -1,8 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { Card, Button } from "react-bootstrap";
-// import Booklist from "./Booklist";
-
-
 
 
 function Home() {
@@ -38,7 +34,6 @@ function Home() {
 
   
   
-
     return (
       <div className="poems-parent-div">
         <h4>Here are a few random poems to get your mind wandering...</h4>
