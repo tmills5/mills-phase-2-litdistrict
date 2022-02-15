@@ -29,7 +29,7 @@ function Home() {
 
   //Changing the title on the webpage tab
     useEffect(()=> {
-      document.title = "home";
+      document.title = "The Lit District - Home";
     },["home"]);
 
   

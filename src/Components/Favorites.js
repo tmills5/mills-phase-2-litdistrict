@@ -33,8 +33,8 @@ function Favorites() {
   
 
     useEffect(() => {
-        document.title = "favorites"
-    }, [])
+        document.title = "The Lit District - Favorites"
+    }, ["favorites"])
 
 
 

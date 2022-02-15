@@ -41,7 +41,7 @@ function Form(props) {
         })
             .then(response => response.json())
             .then(newBook => {
-                console.log(newBook);
+                //console.log(newBook);  //-------WORKS!!
                 getBooks();   //calls the fetch again. has the updated list from the form entry
                 setTitle(""); //resets the state for form title
                 setAuthor(""); //resets the state for form author

@@ -6,7 +6,7 @@ function About() {
     //Changing the title on the webpage tab
 
     useEffect(()=> {
-        document.title = "about";
+        document.title = "The Lit District - About";
       },["about"]);
   
     return (
