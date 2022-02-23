@@ -1,7 +1,7 @@
 import React, { useState, } from "react";
 
 function Form(props) {
-    const books = props.books;  //passing in books as a prop from parent Favorites
+    //const books = props.books;  //passing in books as a prop from parent Favorites
         //console.log(books) //---->WORKS!
     //const setBooks = props.setBooks;
     const getBooks = props.getBooks;
@@ -35,7 +35,7 @@ function Form(props) {
         
 
         fetch("http://localhost:8000/books", {       //this whatever port i designate or what is given..like 3000
-            method: "POST", //type of method IE post,delete, etc
+            method: "POST", //type of method IE post,delete, etc--"posting" a new book to the db.json
             headers: {"Content-type": "application/json"}, //type of content im sending. im sending json data
             body: JSON.stringify(newBook) //actual data im sending. have to turn object into json string, "JSON.stringify does this"
         })
@@ -52,12 +52,16 @@ function Form(props) {
 
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input type='text' placeholder='Title...' value={title} onChange={handleTitleChange} />
-            <input type='text' placeholder='Author...' value={author} onChange={handleAuthorChange}  />
-            <input type='text' placeholder='Image Source...' value={image} onChange={handleImageChange} />
-            <button type='submit' id='submit' name='submit'>Submit</button>
-        </form>
+        <div>
+            
+            <form onSubmit={handleSubmit}>
+                <input type='text' placeholder='Title...' value={title} onChange={handleTitleChange} />
+                <input type='text' placeholder='Author...' value={author} onChange={handleAuthorChange}  />
+                <input type='text' placeholder='Image Source...' value={image} onChange={handleImageChange} />
+                <button type='submit' id='submit' name='submit'>Submit</button>
+            </form>
+            
+        </div>
     )
 }
 

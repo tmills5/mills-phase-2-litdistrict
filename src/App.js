@@ -10,6 +10,7 @@ import About from "./Components/About";
 import Favorites from "./Components/Favorites";
 
 
+
 import Footer from "./Components/Footer";
 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/' element={ <Home /> } />
         <Route path='/about' element={ <About /> } />
         <Route path='/favorites' element={ <Favorites /> } />
+        
       </Routes>
       
       <Footer />

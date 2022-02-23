@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Booklist from "./Booklist";
 import Form from "./Form";
+import Filter from "./Filter";
+
+
+
+
 
 function Favorites() {
     const [books, setBooks] = useState(null);
+    const [filteredBooks, setFilteredBooks] = useState("");
 
 //Get request---set the fetch to a variable, then called the variable in the useEffect
     useEffect(() => {
@@ -30,20 +36,26 @@ function Favorites() {
             })
     }
 
-  
+   
 
     useEffect(() => {
-        document.title = "The Lit District - Favorites"
-    }, ["favorites"])
+        document.title = "The Lit District - Favorites";
+    }, [])
 
+    
 
 
     return (
         <div>
+            
             <h4>Use the Form to add a book to your favorites list!</h4>
             <Form books={books} setBooks={setBooks} getBooks={getBooks} />
-            {books && <Booklist books={books} deleteBook={deleteBook} />}        {/*logical and operator-reads books first so doesnt read null */}
+            {books && <Filter books={books} filteredBooks={filteredBooks} setFilteredBooks={setFilteredBooks} />}
+            {books && <Booklist books={books} deleteBook={deleteBook} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
+            
         </div>
     )
 }
+
+
 export default Favorites;

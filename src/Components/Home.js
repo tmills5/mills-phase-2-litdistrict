@@ -21,7 +21,7 @@ function Home() {
   } 
 
 
-  useEffect(()=> {
+  useEffect(()=> { //grabbing the poems as side effect. 
      getRandomPoems()
   }, [])
 
@@ -30,7 +30,7 @@ function Home() {
   //Changing the title on the webpage tab
     useEffect(()=> {
       document.title = "The Lit District - Home";
-    },["home"]);
+    },[]);
 
   
   

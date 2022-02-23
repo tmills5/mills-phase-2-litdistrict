@@ -7,7 +7,7 @@ function About() {
 
     useEffect(()=> {
         document.title = "The Lit District - About";
-      },["about"]);
+      },[]);
   
     return (
         <div className="about-component">
