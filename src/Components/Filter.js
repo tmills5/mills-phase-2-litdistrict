@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function Filter(props) {
     const books = props.books;
@@ -7,6 +7,7 @@ function Filter(props) {
 
     
         const handleFilterChange = (e) => {
+            e.preventDefault()
             setFilteredBooks(e.target.value)
         } 
  
