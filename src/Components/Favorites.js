@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Booklist from "./Booklist";
+import BookCardlist from "./Bookcontainer";
 import Form from "./Form";
-import Filter from "./Filter";
+
 
 
 
@@ -9,13 +9,13 @@ import Filter from "./Filter";
 
 function Favorites() {
     const [books, setBooks] = useState(null);
-    const [filteredBooks, setFilteredBooks] = useState("");
+    const [bookTitleSearch, setBookTitleSearch] = useState("");
 
-//Get request---set the fetch to a variable, then called the variable in the useEffect
+    //Get request---set the fetch to a variable, then called the variable in the useEffect-----------
     useEffect(() => {
         getBooks();
     }, [])
-
+    
     function getBooks() {
       fetch('http://localhost:8000/books') //fetching the request
         .then(response => response.json()) //returning a promise in JS object
@@ -24,32 +24,42 @@ function Favorites() {
         })
     }
 
+    //----------------------------------------------------
+    useEffect(() => {
+        document.title = "The Lit District - Favorites";
+    }, [])
+
+    //---------------------------------------------------
     function deleteBook(id) {
         fetch(`http://localhost:8000/books/${id}`, {
             method: "DELETE"
         })
         .then(response => response.json())
         .then(() => {
+            // could assign to a variable and pass into setBooks also. IE const newArray = books.filter((book)=> book.id !== id)
+            // then pass newArray into setBooks()
             setBooks(books.filter((book)=> book.id !== id)) //books state being updated with the array in which the book id gone 
         })
     }
     
+    //----------filtering through books to search for title-------------
+    const handleTitleSearchChange = (e) => {
+        e.preventDefault()
+        setBookTitleSearch(e.target.value)
+    }
 
-    useEffect(() => {
-        document.title = "The Lit District - Favorites";
-    }, [])
-
+    const results = !bookTitleSearch ? books : books.filter((book)=> 
+         book.title.toLowerCase().includes(bookTitleSearch.toLowerCase())
+    )
     
 
 
     return (
         <div>
-            
             <h4>Use the Form to add a book to your favorites list!</h4>
-            <Form books={books} setBooks={setBooks} getBooks={getBooks} />
-            {books && <Filter books={books} filteredBooks={filteredBooks} setFilteredBooks={setFilteredBooks} />}
-            {books && <Booklist books={books} deleteBook={deleteBook} filteredBooks={filteredBooks} setFilteredBooks={setFilteredBooks} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
-            
+            <Form books={books} setBooks={setBooks} />
+            <input className="title-search-input" type="text" placeholder="Search by Book Title..." value={bookTitleSearch} onChange={handleTitleSearchChange} />
+            {books && <BookCardlist books={books} deleteBook={deleteBook} bookTitleSearch={bookTitleSearch} setBookTitleSearch={setBookTitleSearch} results={results}/>}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
         </div>
     )
 }

@@ -113,7 +113,12 @@ h4 {
     color:rgb(0, 0, 0)
 }
 
-/* FORM ----------------------- */
+.title-search-input {
+    text-align: left;
+    margin-left: 30%;
+}
+
+/* ADD BOOK FORM ----------------------- */
 form {
     padding: 1rem;
 }
@@ -124,7 +129,7 @@ input {
     display: block;
 }
 
-/* BOOKLIST----------------- */
+/* BOOKCARDLIST----------------- */
 
 .cardParent {
     display: grid;

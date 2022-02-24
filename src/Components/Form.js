@@ -1,5 +1,4 @@
 import React, { useState, } from "react";
-import Booklist from "./Booklist";
 
 function Form(props) {
     const {books, setBooks} = props
@@ -7,7 +6,6 @@ function Form(props) {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [image, setImage] = useState("");
-    
 
     //handler change functions--------------------------
 
@@ -23,7 +21,7 @@ function Form(props) {
         setImage(event.target.value);
     }
 
-    //handle submit function-----------------------------
+    //handle form submit function-----------------------------
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -40,7 +38,8 @@ function Form(props) {
             .then(response => response.json())
             .then(newBook => {
                 //console.log(newBook);  //-------WORKS!!
-                const addedBook = [...books, newBook] //spread copies books and adds the new book. doesn't mutate array
+                const addedBook = [newBook, ...books] //spread copies books and adds the new book. doesn't mutate original array
+                                                    // can also switch the spread and newBook, whether newBook at beginning or end
                 setBooks(addedBook);   //updates the state with added, new book
                 setTitle(""); //resets the state for form title
                 setAuthor(""); //resets the state for form author
