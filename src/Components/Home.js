@@ -2,36 +2,31 @@ import React, { useEffect, useState } from "react";
 
 
 function Home() {
-   //Random Poem Generator
-   //set to empty array bc fetching takes time and map is trying to iterate over nothing
-   //could try and do a loading state 
 
-   const [poems, setPoems] = useState([]);
-   
+  const [poems, setPoems] = useState([]);
+  
+   //-----------------------------------------------------------
+   useEffect(()=> { //grabbing the poems as side effect. 
+     getRandomPoems();
+     
+  }, [])
 
   const getRandomPoems = () => {
     fetch("https://www.poemist.com/api/v1/randompoems")
       .then(response => response.json())
       .then(poems => {
-        //console.log(poems)
-        //console.log(poems[0]["title"])
         setPoems(poems); //setting state to random generated poems
+        
       })
   } 
 
-
-  useEffect(()=> { //grabbing the poems as side effect. 
-     getRandomPoems()
-  }, [])
-
-  
-
-  //Changing the title on the webpage tab
+  //--------------------------------------------------------------
     useEffect(()=> {
       document.title = "The Lit District - Home";
     },[]);
 
-  
+  //--------------------------------------------------------------
+    
   
     return (
       <div className="poems-parent-div">
@@ -44,7 +39,7 @@ function Home() {
           </div>
         ))}
       </div>
-    )
+      )
 }
 
 

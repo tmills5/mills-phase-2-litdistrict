@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import BookCardlist from "./Bookcontainer";
+import BookCardContainer from "./BookCardContainer";
 import Form from "./Form";
 
 
@@ -59,7 +59,7 @@ function Favorites() {
             <h4>Use the Form to add a book to your favorites list!</h4>
             <Form books={books} setBooks={setBooks} />
             <input className="title-search-input" type="text" placeholder="Search by Book Title..." value={bookTitleSearch} onChange={handleTitleSearchChange} />
-            {books && <BookCardlist books={books} deleteBook={deleteBook} bookTitleSearch={bookTitleSearch} setBookTitleSearch={setBookTitleSearch} results={results}/>}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
+            {books && <BookCardContainer deleteBook={deleteBook} results={results}/>}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
         </div>
     )
 }

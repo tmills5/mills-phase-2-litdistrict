@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Button } from "react-bootstrap";
  
 
-const BookCardlist = (props) => { //passing in props from favorites Parent
+const BookCardContainer = (props) => { //passing in props from favorites Parent
 
     const { deleteBook, results } = props;
         
@@ -29,4 +29,4 @@ const BookCardlist = (props) => { //passing in props from favorites Parent
 }
 
 
-export default BookCardlist;
+export default BookCardContainer;
