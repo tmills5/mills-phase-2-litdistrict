@@ -25,18 +25,15 @@ function Favorites() {
     }
 
     function deleteBook(id) {
-        //console.log(id) //---WORKS!!
-        //alert(id); //---WORKS!!!
         fetch(`http://localhost:8000/books/${id}`, {
             method: "DELETE"
         })
-            .then(response => response.json())
-            .then(books => {
-                getBooks(books);    //calling the get request again. this shows the updated booklist
-            })
+        .then(response => response.json())
+        .then(() => {
+            setBooks(books.filter((book)=> book.id !== id)) //books state being updated with the array in which the book id gone 
+        })
     }
-
-   
+    
 
     useEffect(() => {
         document.title = "The Lit District - Favorites";
@@ -51,7 +48,7 @@ function Favorites() {
             <h4>Use the Form to add a book to your favorites list!</h4>
             <Form books={books} setBooks={setBooks} getBooks={getBooks} />
             {books && <Filter books={books} filteredBooks={filteredBooks} setFilteredBooks={setFilteredBooks} />}
-            {books && <Booklist books={books} deleteBook={deleteBook} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
+            {books && <Booklist books={books} deleteBook={deleteBook} filteredBooks={filteredBooks} setFilteredBooks={setFilteredBooks} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
             
         </div>
     )

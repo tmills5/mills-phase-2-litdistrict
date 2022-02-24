@@ -12,7 +12,7 @@ function Filter(props) {
         } 
  
         const results = !filteredBooks ? books : books.filter((book)=> 
-            book.title.toLowerCase().includes(filteredBooks.toLowerCase())
+            book.title.toLowerCase().includes(filteredBooks.toLowerCase()) //titleQuery rename
         )
         //console.log(results)
     return(

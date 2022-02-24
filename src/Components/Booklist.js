@@ -4,11 +4,11 @@ import { Card, Button } from "react-bootstrap";
     //Styling the card with bootstrap. 
 
     const Booklist = (props) => { //passing in props from favorites Parent
-         const books = props.books;
-         const deleteBook = props.deleteBook;
+        //  const books = props.books;
+        //  const deleteBook = props.deleteBook;
+        //  const filteredBooks = props.filteredBooks;
             //console.log(props) //---->WORKS!!
-        
-            
+        const { books, deleteBook, filteredBooks, setFilteredBooks} = props;
             
 
       return (
@@ -23,7 +23,7 @@ import { Card, Button } from "react-bootstrap";
                         <Card.Text>
                             {book.author}
                         </Card.Text>
-                    <Button variant="primary" onClick={ () => deleteBook(book.id) }>Delete</Button>
+                    <Button variant="primary" onClick={() => deleteBook(book.id)}>Delete</Button>
                     </Card.Body>
 
                 </Card>

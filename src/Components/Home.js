@@ -8,7 +8,6 @@ function Home() {
 
    const [poems, setPoems] = useState([]);
    
-   
 
   const getRandomPoems = () => {
     fetch("https://www.poemist.com/api/v1/randompoems")

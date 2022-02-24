@@ -1,10 +1,8 @@
 import React, { useState, } from "react";
+import Booklist from "./Booklist";
 
 function Form(props) {
-    //const books = props.books;  //passing in books as a prop from parent Favorites
-        //console.log(books) //---->WORKS!
-    //const setBooks = props.setBooks;
-    const getBooks = props.getBooks;
+    const {books, setBooks} = props
 
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
@@ -42,7 +40,8 @@ function Form(props) {
             .then(response => response.json())
             .then(newBook => {
                 //console.log(newBook);  //-------WORKS!!
-                getBooks();   //calls the fetch again. has the updated list from the form entry
+                const addedBook = [...books, newBook] //spread copies books and adds the new book. doesn't mutate array
+                setBooks(addedBook);   //updates the state with added, new book
                 setTitle(""); //resets the state for form title
                 setAuthor(""); //resets the state for form author
                 setImage(""); //resets the state for form image
