@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 The Literature District is a Single Page Application that generates a random poem upon home page load. The user can also add their favorite books from the form menu on the favorites tab. 
 The new book will be added to the list and the user can also delete books. 
+I incorporated a title search function so when the list becomes too large to scroll, the user can simply type the book title in the search field.
 
 This is a very simple SPA that I developed as part of a Project for Flatiron School Phase-2. I hope you guys enjoy.
 
