@@ -5,8 +5,6 @@ import Form from "./Form";
 
 
 
-
-
 function Favorites() {
     const [books, setBooks] = useState(null);
     const [bookTitleSearch, setBookTitleSearch] = useState("");
