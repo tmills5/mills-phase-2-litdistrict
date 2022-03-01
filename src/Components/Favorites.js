@@ -56,10 +56,10 @@ function Favorites() {
 
     return (
         <div>
-            <h4>Use the Form to add a book to your favorites list!</h4>
-            <Form books={books} setBooks={setBooks} />
             <input className="title-search-input" type="text" placeholder="Search by Book Title..." value={bookTitleSearch} onChange={handleTitleSearchChange} />
-            {books && <BookCardContainer deleteBook={deleteBook} results={results}/>}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
+            <h4 className="form-directions">Use the Form to add a book to your favorites list!</h4>
+            <Form books={books} setBooks={setBooks} />
+            {books && <BookCardContainer deleteBook={deleteBook} results={results} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
         </div>
     )
 }

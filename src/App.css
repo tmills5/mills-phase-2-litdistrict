@@ -106,16 +106,17 @@ header {
 }
 
 /* FAVORITES ------------------ */
-h4 {
+.form-directions {
+    Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
     padding: 10px;
     font-weight: bolder;
-    text-align: center;
+    text-align: left;
     color:rgb(0, 0, 0)
 }
 
 .title-search-input {
     text-align: left;
-    margin-left: 30%;
+    margin: 2% 30%;
 }
 
 /* ADD BOOK FORM ----------------------- */
@@ -129,7 +130,7 @@ input {
     display: block;
 }
 
-/* BOOKCARDLIST----------------- */
+/* BOOKCARD----------------- */
 
 .cardParent {
     display: grid;

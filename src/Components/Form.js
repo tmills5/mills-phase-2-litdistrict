@@ -1,8 +1,7 @@
 import React, { useState, } from "react";
 
-function Form(props) {
-    const {books, setBooks} = props
-
+function Form( {books, setBooks} ) {
+    
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [image, setImage] = useState("");

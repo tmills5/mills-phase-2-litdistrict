@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 
 function Home() {
-
+  
   const [poems, setPoems] = useState([]);
   
    //-----------------------------------------------------------
@@ -29,7 +29,7 @@ function Home() {
     
   
     return (
-      <div className="poems-parent-div">
+       <div className="poems-parent-div">
         <h4 className="poems-opening-text" >Here are a few random poems to get your mind wandering...</h4>
         {poems.map((poem) => (
           <div className="poem-stack" key={poem.title}>
@@ -38,7 +38,7 @@ function Home() {
             <p className="poem-content">{poem.content}</p>
           </div>
         ))}
-      </div>
+      </div> 
       )
 }
 
