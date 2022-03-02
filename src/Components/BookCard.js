@@ -7,6 +7,7 @@ import { Card, Button } from "react-bootstrap";
 function BookCard( {deleteBook, book} ) {
     const { title, author, image, id } = book;
     
+    
     return(
         <div className="cardDiv"  >
             

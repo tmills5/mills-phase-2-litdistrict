@@ -8,7 +8,7 @@ import Form from "./Form";
 function Favorites() {
     const [books, setBooks] = useState(null);
     const [bookTitleSearch, setBookTitleSearch] = useState("");
-
+    
     //Get request---set the fetch to a variable, then called the variable in the useEffect-----------
     useEffect(() => {
         getBooks();
@@ -44,13 +44,13 @@ function Favorites() {
     const handleTitleSearchChange = (e) => {
         e.preventDefault()
         setBookTitleSearch(e.target.value)
+        
     }
 
     const results = !bookTitleSearch ? books : books.filter((book)=> 
          book.title.toLowerCase().includes(bookTitleSearch.toLowerCase())
     )
     
-
 
     return (
         <div>
