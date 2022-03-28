@@ -6,7 +6,7 @@ import Form from "./Form";
 
 
 function Favorites() {
-    const [books, setBooks] = useState(null);
+    const [books, setBooks] = useState([]);
     const [bookTitleSearch, setBookTitleSearch] = useState("");
     
     //Get request---set the fetch to a variable, then called the variable in the useEffect-----------
@@ -42,22 +42,21 @@ function Favorites() {
     
     //----------filtering through books to search for title-------------
     const handleTitleSearchChange = (e) => {
-        e.preventDefault()
-        setBookTitleSearch(e.target.value)
-        
+        setBookTitleSearch(e.target.value) 
     }
 
-    const results = !bookTitleSearch ? books : books.filter((book)=> 
+    const results = !bookTitleSearch ? books : [...books].filter((book)=> 
          book.title.toLowerCase().includes(bookTitleSearch.toLowerCase())
     )
     
+
 
     return (
         <div>
             <input className="title-search-input" type="text" placeholder="Search by Book Title..." value={bookTitleSearch} onChange={handleTitleSearchChange} />
             <h4 className="form-directions">Use the Form to add a book to your favorites list!</h4>
             <Form books={books} setBooks={setBooks} />
-            {books && <BookCardContainer deleteBook={deleteBook} results={results} />}        {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
+            <BookCardContainer deleteBook={deleteBook} results={results} />       {/*logical and operator-reads books first so doesnt read null. Passing books and deleteBooks as props to booklist */}
         </div>
     )
 }

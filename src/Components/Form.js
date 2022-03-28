@@ -25,7 +25,7 @@ function Form( {books, setBooks} ) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const newBook = { title, author, image }; //destructoring book 
+        let newBook = { title, author, image }; //destructoring book 
             //console.log(book); //----WORKS!
         
 
@@ -48,6 +48,9 @@ function Form( {books, setBooks} ) {
     }
 
 
+
+    
+
     return(
         <div>
             
@@ -57,7 +60,7 @@ function Form( {books, setBooks} ) {
                 <input type='text' placeholder='Image Source...' value={image} onChange={handleImageChange} />
                 <button type='submit' id='submit' name='submit'>Submit</button>
             </form>
-            
+
         </div>
     )
 }

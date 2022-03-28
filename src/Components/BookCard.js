@@ -12,7 +12,7 @@ function BookCard( {deleteBook, book} ) {
         <div className="cardDiv"  >
             
             <Card className="card" style={{ width: '15rem' }} >
-                <Card.Img src={image} />
+                <Card.Img src={image || "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} />
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>

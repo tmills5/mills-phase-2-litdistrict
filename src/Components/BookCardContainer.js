@@ -2,9 +2,8 @@ import React from "react";
 import BookCard from "./BookCard";
 
 
-const BookCardContainer = (props) => { //passing in props from favorites Parent
+const BookCardContainer = ({ results, deleteBook }) => { //passing in props from favorites Parent
 
-    const { results, deleteBook } = props;
 
     return (
         
